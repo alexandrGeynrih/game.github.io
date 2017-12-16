@@ -10,8 +10,7 @@ $(document).ready(function(){
     $(".popup-preview").magnificPopup({type:'image'});
     
     $("[data-magnific=true]").each(function(){
-        var options=$(this).data("magnific-options");
-        console.log(options)
+        var options=$(this).data("magnific-options");        
         $(this).magnificPopup(options);
     });
     	
@@ -64,11 +63,13 @@ $(document).ready(function(){
         if ( windowScrollTop>30  )
         {
             $("#common-header").addClass("hideHeader");
-            $("#common-header").removeClass("fixedHeader");
+            $("#common-header").addClass("float-header");
+            $("#common-header").removeClass("fixedHeader");            
         }
         else{
              $("#common-header").removeClass("hideHeader");
-             $("#common-header").removeClass("fixedHeader"); 
+             $("#common-header").removeClass("fixedHeader");
+             $("#common-header").removeClass("float-header");
         }
         
         if (  windowScrollTop>30  && window.prevScroll && window.prevScroll > windowScrollTop ) {
@@ -94,6 +95,29 @@ $(document).ready(function(){
         theme: 'fontawesome-stars'
     });
 
+    
+    //Game slider
+    $(".game-slider").owlCarousel({
+        loop:true,
+        margin:10,
+        responsiveClass:true,
+        navText:['<i class="fa fa-long-arrow-left" aria-hidden="true"></i>','<i class="fa fa-long-arrow-right" aria-hidden="true"></i>'],
+        responsive:{
+            0:{
+                items:1,
+                nav:true
+            },
+            600:{
+                items:1,
+                nav:false
+            },
+            1000:{
+                items:1,
+                nav:true,
+                loop:false
+            }
+        }
+    });
     
 
         
