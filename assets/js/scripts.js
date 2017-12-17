@@ -77,8 +77,28 @@ $(document).ready(function(){
             $("#common-header").addClass("fixedHeader");            
         }
         
-        window.prevScroll= $(window).scrollTop();
+        window.prevScroll= $(window).scrollTop();        
     });
+    
+    
+    //Product detail. Basket
+    if ( $(".game-detail-wrapp").length && $(".right-product-block").length && $(window).width()>=960 )
+    {        
+        var containerHeight=$(".game-detail-wrapp > .container").height();
+        var blockTop=$(".right-product-block").offset().top;
+        $(window).scroll(function(event)
+        {            
+            if(  $(window).scrollTop() > blockTop )
+            {
+                $(".right-product-block").addClass("fixed");
+            }
+            else{
+                 $(".right-product-block").removeClass("fixed");
+            }
+            
+        });
+    }
+    
     
     
     //Animate
@@ -119,6 +139,45 @@ $(document).ready(function(){
         }
     });
     
+    //Counter product
+    $(document).on("click", ".change-count-basket", function(event){
+    
+        event.preventDefault();
+        var countField=$(this).parent().find(".count-product");
+        var curValue=parseInt( countField.val() );        
+        //minus
+        if( $(this).hasClass("minus-product") )
+        {
+            if ( curValue && curValue > 0 ) {
+                var newCount=curValue-1;
+                countField.val(newCount);
+            }
+            else
+                countField.val(0);
+        }
+        //plus
+        if( $(this).hasClass("plus-product") )
+        {            
+            var newCount=curValue+1;
+            countField.val(newCount);                        
+        }        
+    });
 
+    //Scroll to top page
+    var windowHeight=$(window).height();
+    $(window).scroll(function(event)
+    {
+        if ( $(window).scrollTop() > windowHeight  )        
+            $("#up-page-btn").addClass("in");        
+        else
+            $("#up-page-btn").removeClass("in");
+    });
+    
+    $("#up-page-btn").click(function(event){
+        event.preventDefault();
+         $('html, body').animate({
+            scrollTop: 0
+        }, 500);    
+    });
         
 });
