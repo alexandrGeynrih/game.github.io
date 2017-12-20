@@ -179,5 +179,10 @@ $(document).ready(function(){
             scrollTop: 0
         }, 500);    
     });
+    
+    //Products list
+    if ( $(".products-list").length ) {
+        $(".products-list").masonry({"itemSelector":".item","percentPosition":true,"columnWidth": ".item-width-etalon"});
+    }
         
 });
