@@ -2521,6 +2521,28 @@ ul.gf-inline>li:last-child {
     #mobile-header .logo{display: inline-block; position: static; }
     .mm-opened + .mm-page #main-slider{position: relative; z-index: 0;}
 }
+
+/*tablet*/
+@media (max-width:1024px) {
+    .produts-list-wrapper{
+        margin-top: 50px;
+    }
+    .products-list .item-wrapp .item-content{
+        opacity: 1;
+    }
+    .products-list .btn-wrapper{
+        position: absolute;
+        bottom: 20px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .products-list .item-wrapp:before{
+        background: rgba(0,0,0,0.3);
+    }
+}
+
+
 /* mobile */
 @media (max-width:720px) {    
     
