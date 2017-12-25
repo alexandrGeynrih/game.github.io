@@ -822,6 +822,13 @@ a:hover, a:focus{
     position: relative;
 }
 
+.news-list .row + .row{
+    margin-bottom: 30px;
+}
+
+.news-list-wrapp .news-list .news-info{
+    border-bottom: 1px solid #efefef;
+}
 
 .news-list .news-image > .link-news:before{
     content: '';
