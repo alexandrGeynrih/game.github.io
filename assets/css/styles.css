@@ -2719,6 +2719,66 @@ ul#shipping_method li input {
 
 /******************** END OREDER LOGIN *********************/
 
+/********************  ORDERS LIST *********************/
+
+.orders-table{
+    width: 100%;
+    border-collapse: separate;
+    margin-top: 50px;
+}
+
+.orders-table thead td{
+    font-weight: bold;
+    font-size: 15pt;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #efefef;    
+}
+
+.orders-table tbody td{
+    padding: 20px 0px;
+    border-bottom: 1px solid #efefef;
+}
+.orders-table tbody  .product-block .product-title{
+    font-size: 13pt;
+    margin-left: 20px;
+    color: #696969;
+    font-weight: 400;
+    line-height: 24px;
+    transition: color linear 0.3s;
+    text-decoration: none;
+}
+.orders-table tbody  .product-block .product-title:hover{
+    color: #f76b6a;
+}
+
+.orders-table .product-price-block{
+    color: #ababab;    
+    font-weight: 700;
+    font-size: 13pt;
+}
+.orders-table  .product-summ
+{
+    color: #333333;    
+    font-weight: 700;
+    font-size: 13pt;
+}
+
+.order-status{
+        display: inline-block;
+    position: relative;
+    padding-left: 23px;
+    color: #ababab;
+}
+.order-status.in-stock .fa{
+    color: #49b726;
+}
+.order-status.not-stock .fa{
+    color: #e41010;
+}
+
+/******************** END ORDERS LIST *********************/
+
  .heading-title {
     font-size: 34px;
     line-height: 34px;
@@ -3436,4 +3496,35 @@ ul.gf-inline>li:last-child {
         width: 100%;
     }
     
+    
+    .orders-table,
+    .orders-table tbody,
+    .orders-table tbody tr,
+    .orders-table tbody td,
+    .orders-table tfoot td
+    {
+        display: block;
+        width: 100%;
+        text-align: right;
+    }
+    .orders-table thead{
+        display: none;
+    }
+    
+    .orders-table tbody td:before{
+        content: attr(data-title) ": ";
+        font-weight: 700;
+        float: left;
+    }
+    
+    .orders-table tbody td:first-child:before{
+        display: none;
+    }
+    .orders-table tbody td:first-child{
+        text-align: left;
+    }
+    
+    .orders-table tbody td > *{
+        vertical-align: middle;
+    }
 }
