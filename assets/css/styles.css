@@ -2661,7 +2661,63 @@ ul#shipping_method li input {
 
 /******************** END BASKET *********************/
 
+/******************** END OREDER LOGIN *********************/
+.order-login-form{
+    width: 700px;
+    max-width: 100%;
+    margin: 0px auto;
+    padding: 80px 0px;
+}
 
+.order-login-form .description{
+    font-size: 14pt;
+    line-height: 24pt;
+    color: #696969;
+    margin-bottom: 50px;
+}
+
+.order-login-form label {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ababab;
+    display: block;
+}
+.order-login-form input[type="text"]
+{
+    border: 1px solid transparent;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: #f7f7f7;
+    height: 40px;
+    line-height: 40px;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    outline: 0;
+    line-height: 1;
+    text-align: center;
+}
+.order-login-form input[type="text"]:focus
+{
+    border-color:  #f76b6a;
+}
+
+.order-login-form .form-row:last-child{
+    margin-top: 40px;
+}
+
+/******************** END OREDER LOGIN *********************/
 
  .heading-title {
     font-size: 34px;
